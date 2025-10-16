@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  word-break: keep-all;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2 {
+  font-size: 1.7em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1em;
+  margin-bottom: 0.5rem;
+}
+
+header {
+  background-color: #595959;
+  color: white;
+  padding: 0.8rem 0 2rem 0;
+  
+}
+
+header h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+header li {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+main img {
+  width: 100%;
+}
+.icon {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+main a {
+  color: #007bff;
+}
+
+main a:hover {
+  text-decoration: underline; /* 마우스를 올렸을 때 밑줄을 표시합니다. */
+}
+
+.ul-no-bullet {
+  list-style: none;
+  padding: 0;
+}
+
+.tags {
+  display: flex;
+  list-style: none;
+  margin: 2rem 0 3rem 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.tags li {
+  background-color: #f0f0f0;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+}
+
+.collapsible-trigger {
+  cursor: pointer;
+  position: relative;
+  padding-left: 1.5rem;
+  margin: 0.5em;
+}
+
+.collapsible-trigger::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease-in-out;
+  font-size: 0.7em;
+}
+
+.collapsible.open .collapsible-trigger::before {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+
+  background-color: #fafafa;
+  padding: 0 1.5rem;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fafafa;
+  padding: 0 1.5rem;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-bottom: 0;
+}
+
+.card .subtitle {
+  margin: 0 0 3em 0;
+}
+
+.card .datetime {
+  margin: 1em;
+  font-size: 1.2em;
+}
