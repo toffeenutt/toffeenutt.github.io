@@ -69,7 +69,7 @@ main a {
 }
 
 main a:hover {
-  text-decoration: underline; /* 마우스를 올렸을 때 밑줄을 표시합니다. */
+  text-decoration: underline;
 }
 
 .ul-no-bullet {
@@ -80,7 +80,7 @@ main a:hover {
 .tags {
   display: flex;
   list-style: none;
-  margin: 2rem 0 3rem 0;
+  margin: 2em 0 2em 0;
   padding: 0;
   gap: 1rem;
 }
@@ -91,11 +91,22 @@ main a:hover {
   border-radius: 0.5rem;
 }
 
+#shadow-memory-table {
+  width: 60%;
+  margin: 1em 0;
+}
+
+
 .collapsible-trigger {
   cursor: pointer;
   position: relative;
-  padding-left: 1.5rem;
-  margin: 0.5em;
+  padding-left: 1em;
+  margin: 0.5em 0;
+}
+
+h3.collapsible-trigger {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: normal;
 }
 
 .collapsible-trigger::before {
@@ -105,20 +116,16 @@ main a:hover {
   top: 50%;
   transform: translateY(-50%);
   transition: transform 0.2s ease-in-out;
-  font-size: 0.7em;
+  font-size: 0.5em;
 }
 
-.collapsible.open .collapsible-trigger::before {
+.collapsible.open>.collapsible-trigger::before {
   transform: translateY(-50%) rotate(90deg);
 }
 
-.collapsible-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-in-out;
-
+article>.collapsible-content {
   background-color: #fafafa;
-  padding: 0 1.5rem;
+  padding: 0.5em;
   border-radius: 8px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 }
